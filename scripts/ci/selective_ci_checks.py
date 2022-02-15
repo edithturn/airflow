@@ -59,8 +59,8 @@ def ga_output(parameter_name: str, parameter_value: str):
 def output_all_basic_variables():
     print("Print Env Variables")
     print(os.environ)
-    CURRENT_PYTHON_MAJOR_MINOR_VERSIONS = os.getenv('CURRENT_PYTHON_MAJOR_MINOR_VERSIONS')
-    print(CURRENT_PYTHON_MAJOR_MINOR_VERSIONS)
+    CURRENT_PYTHON_MAJOR_MINOR_VERSIONS = os.environ.get('CURRENT_PYTHON_MAJOR_MINOR_VERSIONS')
+    print(f"CURRENT_PYTHON_MAJOR_MINOR_VERSIONS ->> ${CURRENT_PYTHON_MAJOR_MINOR_VERSIONS}")
     ALL_PYTHON_MAJOR_MINOR_VERSIONS = os.environ.get('ALL_PYTHON_MAJOR_MINOR_VERSIONS')
     print(f" HERE >>  + {FULL_TESTS_NEEDED_LABEL}")
     if FULL_TESTS_NEEDED_LABEL:
